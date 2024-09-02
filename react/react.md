@@ -584,6 +584,49 @@ export default App;
 
 # Redux
 
+> 是什么？
+>
+> Redux 是 JavaScript 状态容器，提供可预测化的状态管理。
+>
+> Redux 除了和 [React](https://facebook.github.io/react/) 一起用外，还支持其它界面库。 它体小精悍（只有 2kB，包括依赖）。
+>
+> 什么是状态容器？
+>
+> 是一个在应用中**集中管理和维护数据的地方**。你可以把它想象成一个仓库，里面存储着应用的所有状态信息。
+>
+> 怎么使用？
+>
+> 依赖安装：
+>
+> npm install @reduxjs/toolkit react-redux
+>
+> Redux Toolkit 是一个官方工具集，它简化了 Redux 的配置和使用，提供了很多开箱即用的功能
+>
+> 基础使用：
+>
+> 应用的整体全局状态以对象树的方式存放于单个 *store*。 唯一改变状态树（state tree）的方法是创建 *action*（一个描述发生了什么的对象），并将其 *dispatch* 给 store。state响应action更新需要通过reducer函数，这些函数根据旧 state 和 action 来计算新 state。
+>
+> 核心概念：
+>
+> state
+>
+> Action
+>
+> **action** 是一个具有 `type` 字段的普通 JavaScript 对象。**你可以将 action 视为描述应用程序中发生了什么的事件**
+>
+> Reducer
+>
+> **reducer** 是一个函数，接收当前的 `state` 和一个 `action` 对象，必要时决定如何更新状态，并返回新状态。函数签名是：`(state, action) => newState`。 **你可以将 reducer 视为一个事件监听器，它根据接收到的 action（事件）类型处理事件。**
+>
+> Store
+>
+> store 是通过传入一个 reducer 来创建的，并且有一个名为 `getState` 的方法，它返回当前状态值
+>
+> store的方法
+>
+> - Dispatch
+>   - **更新 state 的唯一方法是调用 `store.dispatch()` 并传入一个 action 对象**。
+
 > Store、createStore()
 >
 > State、store.getState()
@@ -1009,3 +1052,4 @@ export default ErrorBoundary;
 >
 > 
 
+# 单向数据流
