@@ -1,0 +1,13 @@
+### npm依赖
+#### nrm
+>  快速便捷切换npm镜像源
+  
+```bash
+npm i nrm -g
+```
+
+基本使用
+```bash
+nrm ls # 查看可切换的镜像源列表
+nrm use taobao # 切换到指定的镜像源
+```
